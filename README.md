@@ -1,22 +1,12 @@
-[![Build Status](https://travis-ci.org/EtiennePerot/fuse-jna.png)](https://travis-ci.org/EtiennePerot/fuse-jna)
+[![Release](https://jitpack.io/v/umjammer/fuse-jna.svg)](https://jitpack.io/#umjammer/fuse-jna)  [![Java CI with Maven](https://github.com/umjammer/fuse-jna/workflows/Java%20CI%20with%20Maven/badge.svg)](https://github.com/umjammer/fuse-jna/actions) [![Parent](https://img.shields.io/badge/Parent-vavi--apps--fuse-pink)](https://github.com/umjammer/vavi-apps-fuse)
 
-## The straight dope
-#### Grab it
+# fuse-jna
 
-    git clone git://github.com/EtiennePerot/fuse-jna.git
+## Grab it
 
-#### Run it
+    https://jitpack.io/#umjammer/fuse-jna
 
-    fuse-jna/examples/hellofs.sh ~/hellofs
-
-You now have a test filesystem in `~/hellofs`.
-You'll find a file called `hello.txt` in there.
-
-There's another example filesystem that you can use, which is writable:
-
-    fuse-jna/examples/memoryfs.sh ~/memoryfs
-
-#### Make your own filesystem
+## Make your own filesystem
 
 1. Subclass `net.fusejna.FuseFilesystem` and override the methods you need (For convenience, there is an adapter called `FuseFilesystemAdapterFull`).
 
@@ -31,7 +21,8 @@ There's another example filesystem that you can use, which is writable:
 6. *(Bonus)* You can get logging for free by calling `.log(true)` or `.log(myLogger)` on the filesystem instance.
 
 ## The longer stuff
-#### The idea
+
+### The idea
 fuse-jna was born out of the desire for no-compilation-required, no-bullshit, actually-working bindings to the FUSE library.
 
 Originally built to make the OS X/Linux port of [SrcDemo²] possible, it was separated into its own library because I figured others would benefit from it.
@@ -41,7 +32,7 @@ The goal of fuse-jna is to bring FUSE bindings to Java with the same simplicity.
 
 To do that, it uses [JNA], which itself was inspired by Python's `ctypes` in terms of ease-of-use.
 
-#### "Help! It's too slow!"
+### "Help! It's too slow!"
 
 First and foremost, this library uses [JNA] for bindings, rather than [JNI]. Do not expect native performance. If you need native performance, look elsewhere.
 
@@ -49,7 +40,7 @@ This being said, you can greatly increase throughput by preventing FUSE from chu
 
 Other fuse libraries have popped up that use [JNR] instead of JNA. You might want to use them instead: [javafs], [jnr-fuse].
 
-#### Compatibility
+### Compatibility
 
 Following [fuse.py], fuse-jna should work with:
 
@@ -57,7 +48,7 @@ Following [fuse.py], fuse-jna should work with:
 * Linux with [FUSE][Linux-Fuse] on Intel, ARM, and PowerPC architectures
 * FreeBSD with [FUSE][FreeBSD-Fuse] on Intel architectures
 
-#### Projects using fuse-jna
+### Projects using fuse-jna
 
 * [JGitFS](https://github.com/centic9/JGitFS): Displays Git branches, tags and commits as files
 * [GithubFS](https://github.com/akiellor/githubfs): Expose GitHub issues as files
@@ -68,7 +59,7 @@ Following [fuse.py], fuse-jna should work with:
 
 Feel free to [open an issue](https://github.com/EtiennePerot/fuse-jna/issues/new) to get your project added here.
 
-#### Licensing
+### Licensing
 fuse-jna is licensed under the [BSD 2-Clause License].
 JNA is licensed under the [LGPL v2.1].
 
