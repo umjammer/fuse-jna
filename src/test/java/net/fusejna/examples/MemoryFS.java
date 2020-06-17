@@ -18,7 +18,7 @@ public class MemoryFS extends FuseFilesystemAdapterAssumeImplemented
 {
 	private final class MemoryDirectory extends MemoryPath
 	{
-		private final List<MemoryPath> contents = new ArrayList<MemoryPath>();
+		private final List<MemoryPath> contents = new ArrayList<>();
 
 		private MemoryDirectory(final String name)
 		{

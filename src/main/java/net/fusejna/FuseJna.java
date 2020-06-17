@@ -50,7 +50,7 @@ public final class FuseJna
 	private static Lock initLock = new ReentrantLock();
 	private static Lock filesystemNameLock = new ReentrantLock();
 	private static final Random defaultFilesystemRandom = new Random();
-	private static final Map<File, String> filesystemNames = new HashMap<File, String>();
+	private static final Map<File, String> filesystemNames = new HashMap<>();
 	private static final long errorSleepDuration = 750;
 	private static String fusermount = "fusermount";
 	private static String umount = "umount";

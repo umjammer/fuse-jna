@@ -21,7 +21,7 @@ public final class XattrExampleFS extends HelloFS
 		new XattrExampleFS().log(true).mount(args[0]);
 	}
 
-	private final Map<String, byte[]> helloTxtAttrs = new HashMap<String, byte[]>();
+	private final Map<String, byte[]> helloTxtAttrs = new HashMap<>();
 
 	@Override
 	public int getxattr(final String path, final String xattr, final XattrFiller filler, final long size, final long position)

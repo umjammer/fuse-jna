@@ -21,7 +21,7 @@ public final class DirectoryFillerImpl implements DirectoryFiller
 	private static final String parentDirectory = "..";
 	private final Pointer buf;
 	private final Function nativeFunction;
-	private final Set<String> addedFiles = new HashSet<String>();
+	private final Set<String> addedFiles = new HashSet<>();
 
 	DirectoryFillerImpl(final Pointer buf, final Function nativeFunction)
 	{

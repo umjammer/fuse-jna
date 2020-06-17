@@ -10,7 +10,7 @@ public final class XattrListFiller
 	private final ByteBuffer buffer;
 	private final long maxSize;
 	private long currentSize = 0;
-	private final Set<String> addedXattrs = new HashSet<String>();
+	private final Set<String> addedXattrs = new HashSet<>();
 
 	XattrListFiller(final ByteBuffer buffer, final long size)
 	{
