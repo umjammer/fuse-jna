@@ -245,7 +245,7 @@ public final class FuseJna
 			process = new ProcessGobbler(FuseJna.fusermount, "-z", "-u", mountPoint.toString());
 		}
 		catch (final IOException e) {
-			process = new ProcessGobbler(FuseJna.umount, mountPoint.toString());
+			process = new ProcessGobbler(FuseJna.umount, "-f", mountPoint.toString());
 		}
 		return process.getReturnCode();
 	}
